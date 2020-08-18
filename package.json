@@ -1,0 +1,22 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^2.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "gtts.js": "^1.0.1",
+    "mongoose": "^5.9.3",
+    "say": "^0.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Notes</title>
+    <style>
+              * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            font-size: 100%;
+            margin: 3em;
+            background: #666;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <h1 class="text-center text-capitalize pt-5"> Add Notes </h1>
+            <hr class="w-25 mx-auto pt-5">
+        </div>
+        <form action="/update/<%= notes._id%>" method="POST" class="my-4">
+            <input type="text" placeholder="Enter Title" name="title" id="title" 
+            required class="form-control col mr-2"
+            value = "<%= notes.title%>">
+
+            <textarea type="text" rows="5" placeholder="Enter Description" name="Desc" id="Desc"
+                class="md-textarea form-control my-4" required><%= notes.description %></textarea>
+            <button type="submit" class="btn btn-success">Update Note</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
