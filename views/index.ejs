@@ -74,7 +74,7 @@
             /* font-size: 180%; */
         }
 
-        ul li:nth-child(even)  {
+        ul li:nth-child(even) {
             transform: rotate(4deg);
             -webkit-transform: rotate(4deg);
             -moz-transform: rotate(4deg);
@@ -82,7 +82,7 @@
             top: 5px;
         }
 
-        ul li:nth-child(3n)  {
+        ul li:nth-child(3n) {
             transform: rotate(-3deg);
             -webkit-transform: rotate(-3deg);
             -moz-transform: rotate(-3deg);
@@ -91,7 +91,7 @@
             background: #f26b6b;
         }
 
-        ul li:nth-child(5n)  {
+        ul li:nth-child(5n) {
             transform: rotate(5deg);
             -webkit-transform: rotate(5deg);
             -moz-transform: rotate(5deg);
@@ -110,6 +110,14 @@
             transform: scale(1.25);
             position: relative;
             z-index: 5;
+        }
+
+        @media only screen and (max-width: 600px) {
+            ul li {
+                margin: 20px 0px;
+                float: left;
+                width: 13em;
+            }
         }
     </style>
 </head>
@@ -138,20 +146,20 @@
             <ul>
                 <% notes.forEach(note => { %>
                 <li>
-                        <h2><%= note.title%></h2>
-                        <p class="card-text"><%= note.description%></p>
-                        <div class="text-right py-2">
-                            <a href="<%= note._id%>"><i class='far fa-edit mx-1' style="font-size:24px;color:green"></i></a>
-                            <!-- <a href ="/speak/<%= note._id %>"><i class='fas fa-download mx-1' style="font-size:24px"></i></a> -->
-                            <a href="/download/<%= note._id %>"><i class='fas fa-download mx-1'
-                                    style="font-size:24px"></i></a>
-                            <a href="/delete/<%= note._id%>"><i class='far fa-trash-alt mx-1'
-                                    style="font-size:24px;color:red"></i></a>
-                        </div>
-                    
+                    <h2><%= note.title%></h2>
+                    <p class="card-text"><%= note.description%></p>
+                    <div class="text-right py-2">
+                        <a href="<%= note._id%>"><i class='far fa-edit mx-1' style="font-size:24px;color:green"></i></a>
+                        <!-- <a href ="/speak/<%= note._id %>"><i class='fas fa-download mx-1' style="font-size:24px"></i></a> -->
+                        <a href="/download/<%= note._id %>"><i class='fas fa-download mx-1'
+                                style="font-size:24px"></i></a>
+                        <a href="/delete/<%= note._id%>"><i class='far fa-trash-alt mx-1'
+                                style="font-size:24px;color:red"></i></a>
+                    </div>
+
                 </li>
                 <% }); %>
-               
+
             </ul>
         </section>
 
